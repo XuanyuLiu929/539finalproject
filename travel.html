@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" href="/images/ocean.jpg">
+    <link rel="stylesheet" href="/dist/css/lightbox.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <title>Travel</title>
+</head>
+
+<body>
+    <header>
+        <div class="skip"><a href="#main">Skip to Main Content</a></div>
+        <nav>
+            <div class="topnav" id="myTopnav">
+                <a href="index.html">Home</a>
+                <a href="food.html">Food</a>
+                <a href="travel.html" class="active">Travel</a>
+                <a href="music.html">Music</a>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container" id="main">
+        <h1>My Journey Around the World</h1>
+        <p>Hello and welcome to my travel journey! I’m from China, a country rich in history, culture, and cuisine, but I’ve always felt the urge to explore the world beyond my borders. Traveling has always been a dream of mine, not just to see famous landmarks, but to experience the true essence of different cultures—whether it’s through the food, the people, or the unique way each place tells its own story.</p><br>
+        <img src="/images/worldmap.jpg" alt="The world map"><br>
+
+     
+        <div class="images-gallery">
+            <div class="column">
+                <figure class="mix img1">
+                    <a href="/images/uk.jpg" target="blank" data-lightbox="img1">
+                        <img src="/images/uk.jpg" alt="The image of BigBen in United Kingdom"></a>
+                    <figcaption>United Kingdom</figcaption>
+                </figure>
+
+                <figure class="mix img2">
+                    <a href="/images/china.jpg" target="blank" data-lightbox="img2">
+                        <img src="/images/china.jpg" alt="The image of the Great Wall in China"></a>
+                    <figcaption>China</figcaption>
+                </figure>
+
+
+                <figure class="mix img3">
+                    <a href="/images/france.jpg" target="blank" data-lightbox="img3">
+                        <img src="/images/france.jpg" alt="The image of Eiffel tower in France"></a>
+                    <figcaption>France</figcaption>
+                </figure>
+
+                <figure class="mix img4">
+                    <a href="/images/italy.jpg" target="blank" data-lightbox="img4">
+                        <img src="/images/italy.jpg" alt="The image of Colosseum in Italy"></a>
+                    <figcaption>Italy</figcaption>
+                </figure>
+            </div>
+
+
+            <div class="column">
+                <figure class="mix img5">
+                    <a href="/images/finland.jpg" target="blank" data-lightbox="img5">
+                        <img src="/images/finland.jpg"
+                            alt="The image of winter forest snow sunshine scenery in Finland"></a>
+                    <figcaption>Finland</figcaption>
+                </figure>
+
+                <figure class="mix img6">
+                    <a href="/images/montenegro.jpg" target="blank" data-lightbox="img6">
+                        <img src="/images/montenegro.jpg" alt="The image of old town Budva in Montenegro"></a>
+                    <figcaption>Montenegro</figcaption>
+                </figure>
+
+                <figure class="mix img7">
+                    <a href="/images/japan.jpg" target="blank" data-lightbox="img7">
+                        <img src="/images/japan.jpg" alt="The image of temple in Japan"></a>
+                    <figcaption>Japan</figcaption>
+                </figure>
+
+                <figure class="mix img8">
+                    <a href="/images/korea.jpg" target="blank" data-lightbox="img8">
+                        <img src="/images/korea.jpg" alt="The image of street view in South Korea"></a>
+                    <figcaption>Korea</figcaption>
+                </figure>
+            </div>
+
+
+            <div class="column">
+                <figure class="mix img9">
+                    <a href="/images/singapore.jpg" target="blank" data-lightbox="img9">
+                        <img src="/images/singapore.jpg" alt="The image of Merlion Park in singapore"></a>
+                    <figcaption>Singapore</figcaption>
+                </figure>
+
+                <figure class="mix img10">
+                    <a href="/images/iceland.jpg" target="blank" data-lightbox="img10">
+                        <img src="/images/iceland.jpg" alt="The image of northern lights in iceland"></a>
+                    <figcaption>Iceland</figcaption>
+                </figure>
+
+                <figure class="mix img11">
+                    <a href="/images/hongkong.jpg" target="blank" data-lightbox="img11">
+                        <img src="/images/hongkong.jpg" alt="The image of Victoria Harbour in Hongkong China"></a>
+                    <figcaption>Hongkong China</figcaption>
+                </figure>
+
+                <figure class="mix img12">
+                    <a href="/images/macau.jpg" target="blank" data-lightbox="img12">
+                        <img src="/images/macau.jpg" alt="The image of Grand Lisboa in Macau China"></a>
+                    <figcaption>Macau China</figcaption>
+                </figure>
+
+
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // learn from w3school
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+
+    <script src="/dist/js/lightbox-plus-jquery.js"></script>
+
+    <script src="/js/mixitup.min.js"></script>
+
+    <script>
+        var containerEl = document.querySelector('.container');
+
+        var mixer = mixitup(containerEl);
+    </script>
+</body>
+
+</html>
