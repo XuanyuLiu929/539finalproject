@@ -1,0 +1,446 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+main.container {
+    padding: 0 20px;
+    margin: 50px auto;
+    max-width: 1400px;
+    width: 100%;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f9fd;
+    margin: 0 auto;
+    font-size: 1rem;
+    width: 100%;
+}
+
+
+
+/* Skip link  */
+.skip a {
+    position: absolute;
+    top: -2.5rem;
+}
+
+.skip a:focus {
+    top: 1rem;
+    background-color: #0047aa;
+    color: #ffffff;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    z-index: 1000;
+}
+
+/* Navigation Styles */
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.topnav {
+    display: flex;
+    justify-content: space-between;
+    background-color: transparent;
+    padding: 0 1rem;
+    width: 100%;
+    max-width: 1200px;
+}
+
+.topnav a {
+    padding: 20px;
+    font-size: 1.25rem;
+    height: 70px;
+    text-decoration: none;
+    color: #001d44;
+    transition: color 0.3s ease;
+    position: relative;
+}
+
+
+.topnav a::before,
+.topnav a::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 0%;
+    height: 0%;
+    border: 0px solid transparent;
+    transition: all 0.5s ease;
+}
+
+
+.topnav a::after {
+    width: 0%;
+    height: 0%;
+    right: 0;
+    bottom: 0;
+    border-bottom: 2px solid transparent;
+    border-right: 2px solid transparent;
+}
+
+
+.topnav a::before {
+    top: 0;
+    left: 0;
+    border-top: 2px solid transparent;
+    border-left: 2px solid transparent;
+}
+
+
+.topnav a:hover::before,
+.topnav a:hover::after {
+    width: 100%;
+    height: 100%;
+    border-color: #0047aa;
+}
+
+
+.topnav a:hover {
+    color: #0047aa;
+}
+
+
+/* Active Link */
+.topnav a.active {
+    color: #0047aa;
+    text-decoration: underline;
+}
+
+
+/* learn from https://dev.to/kiranrajvjd/10-simple-navigation-bar-hover-animations-1980 */
+.topnav a.active::before,
+.topnav a.active::after {
+    display: none;
+}
+
+.topnav a:not(:first-child) {
+    display: none;
+}
+
+.topnav a.icon {
+    float: right;
+    display: block;
+}
+
+.topnav.responsive {
+    position: relative;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+.topnav.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+
+.topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+    padding: 20px;
+}
+
+
+/* Heading Styles */
+h1 {
+    font-size: 2.5rem;
+    color: #001d44;
+    font-weight: bold;
+    line-height: 2.8rem;
+    padding: 2.5rem;
+    text-align: center;
+}
+
+
+h2 {
+    margin: 1rem 0;
+    font-weight: bold;
+    font-size: 2rem;
+    line-height: 2.1rem;
+}
+
+
+/* Intro Section */
+.intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    margin: 50px 0;
+    gap: 30px;
+}
+
+
+.intro .text,
+.intro .selfie {
+    width: 100%;
+}
+
+
+.intro .selfie {
+    display: flex;
+    justify-content: center;
+}
+
+
+.intro .selfie img {
+    width: 100%;
+    border-radius: 10%;
+}
+
+/* form */
+form {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 1rem;
+    align-content: flex-start;
+    margin-bottom: 4rem;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #ffffff;
+    background-color: #2F65A7;
+    border: none;
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-bottom: 5px;
+}
+
+
+.button,
+form button[type="submit"] {
+    display: block;
+    margin: 0 auto;
+    padding: 1rem;
+    font-size: 1rem;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+}
+
+
+.button:hover,
+form button[type="submit"]:hover {
+    background-color: #00274C;
+    color: #ffffff;
+}
+
+form {
+    display: flex;
+    flex-flow: column wrap;
+    gap: 1rem;
+    align-content: flex-start;
+    margin-bottom: 4rem;
+}
+
+
+form label {
+    font-weight: bold;
+}
+
+
+input[type="text"],
+input[type="email"],
+textarea {
+    padding: 0.5rem;
+    font-size: 1rem;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+}
+
+
+/* Message Field */
+#message {
+    width: 100%;
+    height: 150px;
+}
+
+.gallery {
+    border: 3px solid black;
+    width: 100%;
+    margin: 20px auto;
+    background-color: blanchedalmond;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: stretch;
+}
+
+.gallery figure {
+    flex: 1 0 25%; 
+    max-width: 25%; 
+    margin: 15px;  
+    display: flex;
+    flex-direction: column; 
+    align-items: center;  
+}
+
+.gallery img {
+    width: 250px;
+    height: 200px;
+    border: 10px solid firebrick;
+}
+
+.controls {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.control {
+    padding: 10px 20px;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #2F65A7;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.options {
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-around;
+}
+
+.video {
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+}
+
+figcaption {
+    text-align: center;
+}
+
+
+.images-gallery {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.column img {
+    width: 100%;
+}
+
+.column {
+    width: 100%;
+}
+
+.column div {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+
+.fa-instagram {
+    background: #125688;
+    color: white;
+  }
+
+  .fa-linkedin {
+    background: #007bb5;
+    color: white;
+  }
+
+  footer {
+    color: #001d44;
+    padding: 2rem;
+    text-align: center;
+    font-size: 1rem;
+}
+
+#gallery{
+    text-align: center;
+}
+
+/* learn from W3Schools -- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_topnav */
+@media screen and (min-width: 480px) {
+    .intro {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        padding: 50px;
+    }
+
+
+    .intro .selfie img {
+        width: auto;
+        max-width: 300px;
+    }
+
+    h1 {
+        font-size: 2.5rem;
+    }
+
+
+    h2 {
+        font-size: 2rem;
+    }
+
+    header {
+        justify-content: center;
+    }
+
+    .topnav a {
+        font-size: 1.5rem;
+        display: inline-block;
+    }
+
+    .topnav .icon {
+        display: none;
+    }
+
+    /* Show all links on larger screens */
+    .topnav a:not(:first-child) {
+        display: inline-block;
+    }
+
+    .column {
+        width: 33%;
+        padding-right: 0.5rem;
+        padding-left: 0.5rem;
+    }
+
+}

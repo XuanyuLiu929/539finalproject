@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" href="/images/ocean.jpg">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Music</title>
+</head>
+
+<body>
+    <header>
+        <div class="skip"><a href="#main">Skip to Main Content</a></div>
+        <nav>
+            <div class="topnav" id="myTopnav">
+                <a href="index.html">Home</a>
+                <a href="food.html">Food</a>
+                <a href="travel.html">Travel</a>
+                <a href="music.html" class="active">Music</a>
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container" id="main">
+        <h1>Taylor Swift | The Eras Tour</h1>
+        <div>
+            <p>Hey there! I'm so excited to introduce you to one of my all-time favorite artists – Taylor Swift. If you're a fan of catchy tunes, meaningful lyrics, and just an overall awesome vibe, then you’re in for a treat! Taylor has been a huge part of my music collection for years, and her songs never get old.
+
+                Out of all her amazing tracks, "Enchanted" holds a special place in my heart. It's just pure magic – the kind of song that makes you feel like you're part of a story, and every time I listen to it, it still gives me chills.</p>
+        </div>
+        <div class="options">
+            <button id="play">Play Video</button>
+            <button id="pause">Pause Video</button>
+            <button id="slower">Slow Down</button>
+            <button id="faster">Speed Up</button>
+            <button id="skip">Skip Ahead</button>
+        </div>
+
+        <video class="video" autoplay="false" width="640" height="360" id="player1" preload="none"
+            src="/assets/Taylor.mov">
+        </video>
+        <figcaption>[Enchanted]</figcaption>
+        </figure>
+
+        <div class="options">
+        <button id="mute">Mute</button><br>
+
+        <label for="slider">Volume</label>: 0 <input type="range" id="slider" min="0" max="100" value="100" step="10">
+        100%<br>
+        <div>Volume is: <span id="volume"> </span><br><br></div>
+    </div>
+    
+    
+    </main>
+
+    <footer>
+        <p>© <span id="year"></span> Xuanyu Liu's Website</p>
+        <a href="https://www.instagram.com/liuxy_0929/" class="fa fa-instagram"></a>
+        <a href="https://www.linkedin.com/in/xuanyu-liu-966a2422b/" class="fa fa-linkedin"></a>
+    </footer>
+
+
+    <script>
+        document.getElementById("year").innerHTML = new Date().getFullYear();
+    </script>
+
+    <script src="/js/video.js"></script>
+    <script>
+        // learn from w3school
+        function myFunction() {
+            var x = document.getElementById("myTopnav");
+            if (x.className === "topnav") {
+                x.className += " responsive";
+            } else {
+                x.className = "topnav";
+            }
+        }
+    </script>
+</body>
+
+</html>
