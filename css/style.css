@@ -242,13 +242,10 @@ form button[type="submit"] {
     border-radius: 4px;
     border: none;
     cursor: pointer;
-}
-
-.button:hover,
-form button[type="submit"]:hover {
     background-color: #00274C;
     color: #ffffff;
 }
+
 
 form label {
     font-weight: bold;
