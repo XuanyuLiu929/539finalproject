@@ -474,6 +474,53 @@ input[type="range"] {
         flex-direction: column;
         align-items: flex-start;
     }
+}
+
+@media all and (prefers-reduced-motion: reduce) {
+    /* Remove transition animations */
+.topnav a::before,
+.topnav a::after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 0%;
+    height: 0%;
+    border: 0px solid transparent;
+    /* Removed transition */
+}
+
+.topnav a::after {
+    width: 0%;
+    height: 0%;
+    right: 0;
+    bottom: 0;
+    border-bottom: 2px solid transparent;
+    border-right: 2px solid transparent;
+}
+
+.topnav a::before {
+    top: 0;
+    left: 0;
+    border-top: 2px solid transparent;
+    border-left: 2px solid transparent;
+}
+
+.topnav a:hover::before,
+.topnav a:hover::after {
+    width: 0%;  /* Revert to initial state */
+    height: 0%; /* Revert to initial state */
+    border-color: transparent; /* Remove hover effect */
+}
+
+.topnav a:hover {
+    color: inherit;  /* Remove hover color change */
+}
 
 
+.topnav a.active::before,
+.topnav a.active::after {
+    display: none;
+}
+
+   
 }
