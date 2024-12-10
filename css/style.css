@@ -325,7 +325,7 @@ textarea {
     width: 100%;
     height: auto;
     border: 10px solid transparent;
-    border-image: url(images/border.png) 30 stretch;
+    border-image: url("images/border.png") 30 stretch;
 }
 
 figcaption {
