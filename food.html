@@ -23,7 +23,7 @@
                 <a href="food.html" class="active">Food</a>
                 <a href="travel.html">Travel</a>
                 <a href="music.html">Music</a>
-                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()" aria-label="Open navigation menu">
                     <i class="fa fa-bars"></i>
                 </a>
             </div>
@@ -32,81 +32,100 @@
 
     <body>
         <main class="container" id="main">
-            <h1>A Taste of China: Exploring My Favorite Cuisines</h1>
-            <p>Hey there! I’m from China, where food is such an important part of our culture. From spicy hotpots to savory dumplings, there’s a dish for every taste and occasion. Being someone who loves exploring different flavors, I wanted to share some of my favorite Chinese cuisines with you. Whether it’s the mouth-watering braised Mandarin fish from Anhui or the delicate White Cut Chicken from Cantonese cuisine, each one tells a story of rich traditions and unique tastes. Check out my favorites below!</p>
-            <div class="controls">
-                <button type="button" class="control" data-filter="all">All</button>
-                <button type="button" class="control" data-filter=".hui">Hui</button>
-                <button type="button" class="control" data-filter=".su">Su</button>
-                <button type="button" class="control" data-filter=".lu">Lu</button>
-                <button type="button" class="control" data-filter=".chuan">Chuan</button>
-                <button type="button" class="control" data-filter=".cantonese">Cantonese</button>
-                <button type="button" class="control" data-filter=".fujian">Min</button>
-            </div>
+            <section tabindex="0">
+                <h1>A Taste of China: Exploring My Favorite Cuisines</h1>
+                <p>Hey there! I’m from China, where food is such an important part of our culture. From spicy hotpots to
+                    savory dumplings, there’s a dish for every taste and occasion. Being someone who loves exploring
+                    different flavors, I wanted to share some of my favorite Chinese cuisines with you. Whether it’s the
+                    mouth-watering braised Mandarin fish from Anhui or the delicate White Cut Chicken from Cantonese
+                    cuisine, each one tells a story of rich traditions and unique tastes. Check out my favorites below!
+                </p>
+            </section>
+            <section tabindex="0">
+                <div class="controls">
+                    <button type="button" class="control" data-filter="all">All</button>
+                    <button type="button" class="control" data-filter=".hui">Hui</button>
+                    <button type="button" class="control" data-filter=".su">Su</button>
+                    <button type="button" class="control" data-filter=".lu">Lu</button>
+                    <button type="button" class="control" data-filter=".chuan">Chuan</button>
+                    <button type="button" class="control" data-filter=".cantonese">Cantonese</button>
+                    <button type="button" class="control" data-filter=".fujian">Min</button>
+                </div>
 
-            <div class="container gallery">
-                <figure class="mix hui">
-                    <a href="/images/hui.jpg" target="blank" data-lightbox="hui">
-                        <img src="/images/hui.jpg"
-                            alt="The stinky mandarin fish with fresh green onions and red chili peppers"></a>
-                    <figcaption>The Mandarin Fish is marinated and braised. It is one of the most famous Anhui cuisine
-                        dishes. It may smell stinky, but it tastes great with tender fish meat separated from fish
-                        bones.</figcaption>
-                </figure>
 
-                <figure class="mix cantonese">
-                    <a href="/images/chicken.jpg" target="blank" data-lightbox="chicken">
-                        <img src="/images/chicken.jpg"
-                            alt="The White Cut Chicken and the meat is sliced into thin, even pieces, revealing juicy, succulent white flesh."></a>
-                    <figcaption>The White Cut Chicken is boiled in water over low heat without seasonings. It is eaten
-                        with dipping sauce made of salt, sugar, ginger, sesame oil, and cooking wine. The chicken tastes
-                        tender, smooth and slightly sweet.</figcaption>
-                </figure>
+                <div class="container_gallery">
+                    <figure class="mix hui">
+                        <a href="/images/hui.jpg" target="blank" data-lightbox="hui">
+                            <img src="/images/hui.jpg"
+                                alt="The stinky mandarin fish with fresh green onions and red chili peppers"></a>
+                        <figcaption>The Mandarin Fish is marinated and braised. It is one of the most famous Anhui
+                            cuisine
+                            dishes. It may smell stinky, but it tastes great with tender fish meat separated from fish
+                            bones.</figcaption>
+                    </figure>
 
-                <figure class="mix fujian">
-                    <a href="/images/buddha.jpg" target="blank" data-lightbox="buddha">
-                        <img src="/images/buddha.jpg"
-                            alt="Buddha Jumps Over the Wal with the combination of ingredients like abalone, sea cucumber, shark fin, and ginseng"></a>
-                    <figcaption>Buddha Jumps Over the Wall is stewed for over 10 hours with 28 main ingredients, like
-                        abalone, sea cucumber, shark's fin, fish belly, fish lip, tendon, ham, scallops, mushroom, etc.
-                    </figcaption>
-                </figure>
+                    <figure class="mix cantonese">
+                        <a href="/images/chicken.jpg" target="blank" data-lightbox="chicken">
+                            <img src="/images/chicken.jpg"
+                                alt="The White Cut Chicken and the meat is sliced into thin and even pieces"></a>
+                        <figcaption>The White Cut Chicken is boiled in water over low heat without seasonings. It is
+                            eaten
+                            with dipping sauce made of salt, sugar, ginger, sesame oil, and cooking wine. The chicken
+                            tastes
+                            tender, smooth and slightly sweet.</figcaption>
+                    </figure>
 
-                <figure class="mix su">
-                    <a href="/images/su.jpg" target="blank" data-lightbox="su">
-                        <img src="/images/su.jpg"
-                            alt="Squirrel Fish is split open along the sides, with the flesh inside delicately exposed"></a>
-                    <figcaption>Sweet and sour carp is bright red and tastes sweet, sour and crispy outside. It seems
-                        that the carp is splashing higher, which is an auspicious sign in China.</figcaption>
-                </figure>
+                    <figure class="mix fujian">
+                        <a href="/images/buddha.jpg" target="blank" data-lightbox="buddha">
+                            <img src="/images/buddha.jpg"
+                                alt="Buddha Jumps Over the Wal with the combination of ingredients like abalone and sea cucumber"></a>
+                        <figcaption>Buddha Jumps Over the Wall is stewed for over 10 hours with 28 main ingredients,
+                            like
+                            abalone, sea cucumber, shark's fin, fish belly, fish lip, tendon, ham, scallops, mushroom,
+                            etc.
+                        </figcaption>
+                    </figure>
 
-                <figure class="mix lu">
-                    <a href="/images/sausage.jpg" target="blank" data-lightbox="sausage">
-                        <img src="/images/sausage.jpg" alt="Braised intestines in brown sauce"></a>
-                    <figcaption>It is a traditional dish in Jinan City, Shandong Province, where the government in 2020
-                        designated it a "classic" dish of Lu cuisine and "one of the most famous dishes in Shandong"
-                    </figcaption>
-                </figure>
+                    <figure class="mix su">
+                        <a href="/images/su.jpg" target="blank" data-lightbox="su">
+                            <img src="/images/su.jpg"
+                                alt="Squirrel Fish is split open along the sides, with the flesh inside delicately exposed"></a>
+                        <figcaption>Sweet and sour carp is bright red and tastes sweet, sour and crispy outside. It
+                            seems
+                            that the carp is splashing higher, which is an auspicious sign in China.</figcaption>
+                    </figure>
 
-                <figure class="mix chuan">
-                    <a href="/images/kung.jpg" target="blank" data-lightbox="kung">
-                        <img src="/images/kung.jpg" alt="Kung Pao Chicken with chilli"></a>
-                    <figcaption>Kung Pao Chicken, also Gong Bao Ji Ding or Gung Po Chicken, is a traditional dish of
-                        Sichuan Cuisine famous both at home and abroad. The mixture of the seasonings makes the dish
-                        taste special, and its flavor can be either spicy or mild, which is decided by the amount of
-                        chili peppers. </figcaption>
-                </figure>
+                    <figure class="mix lu">
+                        <a href="/images/sausage.jpg" target="blank" data-lightbox="sausage">
+                            <img src="/images/sausage.jpg" alt="Braised intestines in brown sauce"></a>
+                        <figcaption>It is a traditional dish in Jinan City, Shandong Province, where the government in
+                            2020
+                            designated it a "classic" dish of Lu cuisine and "one of the most famous dishes in Shandong"
+                        </figcaption>
+                    </figure>
 
-            </div>
+                    <figure class="mix chuan">
+                        <a href="/images/kung.jpg" target="blank" data-lightbox="kung">
+                            <img src="/images/kung.jpg" alt="Kung Pao Chicken with chilli"></a>
+                        <figcaption>Kung Pao Chicken, also Gong Bao Ji Ding or Gung Po Chicken, is a traditional dish of
+                            Sichuan Cuisine famous both at home and abroad. The mixture of the seasonings makes the dish
+                            taste special, and its flavor can be either spicy or mild, which is decided by the amount of
+                            chili peppers. </figcaption>
+                    </figure>
+                    <!-- I searched the introduction of Chinese typical cusine and asked chatgpt to generate the script. Prompts: "Tell me about xxx cusine" -->
+                </div>
+            </section>
         </main>
 
         <footer>
             <p>© <span id="year"></span> Xuanyu Liu's Website</p>
-            <a href="https://www.instagram.com/liuxy_0929/" class="fa fa-instagram"></a>
-            <a href="https://www.linkedin.com/in/xuanyu-liu-966a2422b/" class="fa fa-linkedin"></a>
+            <a href="https://www.instagram.com/liuxy_0929/" class="fa fa-instagram"
+                aria-label="The link of Xuanyu's Instagram account"></a>
+            <a href="https://www.linkedin.com/in/xuanyu-liu-966a2422b/" class="fa fa-linkedin"
+                aria-label="The link of Xuanyu's Linkedin account"></a>
         </footer>
-    
-    
+
+
         <script>
             document.getElementById("year").innerHTML = new Date().getFullYear();
         </script>

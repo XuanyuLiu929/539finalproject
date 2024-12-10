@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" href="images/ocean.jpg">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="icon" href="/images/ocean.jpg">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <title>Home</title>
@@ -21,7 +21,7 @@
                 <a href="food.html">Food</a>
                 <a href="travel.html">Travel</a>
                 <a href="music.html">Music</a>
-                <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+                <a href="javascript:void(0);" class="icon" onclick="myFunction()" aria-label="Open navigation menu">
                     <i class="fa fa-bars"></i>
                 </a>
             </div>
@@ -40,26 +40,32 @@
                     shares more about my interests—thank you for visiting, and it’s nice to meet you!</p>
             </div>
             <div class="selfie">
-                <img src="images/selfie.JPG" alt="Xuanyu Liu's selfie">
+                <img src="/images/selfie.JPG" alt="Xuanyu Liu's selfie">
             </div>
             </div>
         </section>
 
-        <form action="https://formspree.io/f/xovqnnwy" method="POST">
-            <label for=“name_id”>Your Name</label> <input type="text" placeholder="Enter Your Name" name="mnemonic_name"
-                id=“name_id”>
-            <label for="email">Your email:</label> <input type="email" name="email" id="email"
-                placeholder="Enter Your Email">
-            <label for="message">Your message:</label> <textarea name="message" id="message"
-                placeholder="Enter Your Message"></textarea>
-            <button type="submit">Send</button>
-        </form>
+
+        <section tabindex="0">
+            <h2>Contact Me</h2>
+            <form action="https://formspree.io/f/xovqnnwy" method="POST">
+                <label for=“name_id”>Your Name</label> <input type="text" placeholder="Enter Your Name"
+                    name="mnemonic_name" id=“name_id”>
+                <label for="email">Your email:</label> <input type="email" name="email" id="email"
+                    placeholder="Enter Your Email">
+                <label for="message">Your message:</label> <textarea name="message" id="message"
+                    placeholder="Enter Your Message"></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </section>
     </main>
-    
+
     <footer>
         <p>© <span id="year"></span> Xuanyu Liu's Website</p>
-        <a href="https://www.instagram.com/liuxy_0929/" class="fa fa-instagram"></a>
-        <a href="https://www.linkedin.com/in/xuanyu-liu-966a2422b/" class="fa fa-linkedin"></a>
+        <a href="https://www.instagram.com/liuxy_0929/" class="fa fa-instagram"
+            aria-label="The link of Xuanyu's Instagram account"></a>
+        <a href="https://www.linkedin.com/in/xuanyu-liu-966a2422b/" class="fa fa-linkedin"
+            aria-label="The link of Xuanyu's Linkedin account"></a>
     </footer>
 
 
