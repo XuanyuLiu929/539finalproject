@@ -25,8 +25,6 @@ body {
     width: 100%;
 }
 
-
-
 /* Skip link  */
 .skip a {
     position: absolute;
@@ -53,7 +51,7 @@ header {
     display: flex;
     justify-content: space-between;
     background-color: transparent;
-    padding: 0 1rem;
+    padding: 0 5rem;
     width: 100%;
     max-width: 1200px;
 }
@@ -68,7 +66,8 @@ header {
     position: relative;
 }
 
-
+/* transition effect */
+/* learn from https://dev.to/kiranrajvjd/10-simple-navigation-bar-hover-animations-1980 */
 .topnav a::before,
 .topnav a::after {
     content: "";
@@ -118,20 +117,9 @@ header {
     text-decoration: underline;
 }
 
-
-/* learn from https://dev.to/kiranrajvjd/10-simple-navigation-bar-hover-animations-1980 */
 .topnav a.active::before,
 .topnav a.active::after {
     display: none;
-}
-
-.topnav a:not(:first-child) {
-    display: none;
-}
-
-.topnav a.icon {
-    float: right;
-    display: block;
 }
 
 .topnav.responsive {
@@ -141,12 +129,28 @@ header {
 }
 
 
+/* Styles (for smaller screens) */
+.topnav a {
+    display: none;
+    /* Hide all links by default */
+}
+
+/* Always show the 'Home' link */
+.topnav a:first-child {
+    display: inline-block;
+}
+
+/* Show the icon (for mobile menu) */
+.topnav a.icon {
+    display: inline-block;
+}
+
+
 .topnav.responsive .icon {
     position: absolute;
     right: 0;
     top: 0;
 }
-
 
 .topnav.responsive a {
     float: none;
@@ -155,6 +159,7 @@ header {
     padding: 20px;
 }
 
+/* learn from W3Schools -- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_topnav */
 
 /* Heading Styles */
 h1 {
@@ -174,8 +179,8 @@ h2 {
     line-height: 2.1rem;
 }
 
-
-/* Intro Section */
+/* index.html */
+/* Intro Section*/
 .intro {
     display: flex;
     flex-direction: column;
@@ -186,18 +191,15 @@ h2 {
     gap: 30px;
 }
 
-
 .intro .text,
 .intro .selfie {
     width: 100%;
 }
 
-
 .intro .selfie {
     display: flex;
     justify-content: center;
 }
-
 
 .intro .selfie img {
     width: 100%;
@@ -242,21 +244,11 @@ form button[type="submit"] {
     cursor: pointer;
 }
 
-
 .button:hover,
 form button[type="submit"]:hover {
     background-color: #00274C;
     color: #ffffff;
 }
-
-form {
-    display: flex;
-    flex-flow: column wrap;
-    gap: 1rem;
-    align-content: flex-start;
-    margin-bottom: 4rem;
-}
-
 
 form label {
     font-weight: bold;
@@ -273,39 +265,17 @@ textarea {
 }
 
 
-/* Message Field */
+/* Message Field of Form*/
 #message {
     width: 100%;
     height: 150px;
 }
 
-.gallery {
-    border: 3px solid black;
-    width: 100%;
-    margin: 20px auto;
-    background-color: blanchedalmond;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: stretch;
-}
 
-.gallery figure {
-    flex: 1 0 25%; 
-    max-width: 25%; 
-    margin: 15px;  
-    display: flex;
-    flex-direction: column; 
-    align-items: center;  
-}
-
-.gallery img {
-    width: 250px;
-    height: 200px;
-    border: 10px solid firebrick;
-}
+/* food.html */
 
 .controls {
+    /* the layout of food button */
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
@@ -314,6 +284,7 @@ textarea {
 }
 
 .control {
+    /* food button (e.g., All, Hui) */
     padding: 10px 20px;
     font-size: 1rem;
     color: #fff;
@@ -324,29 +295,6 @@ textarea {
     text-align: center;
 }
 
-.options {
-    padding: 10px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: space-around;
-}
-
-.video {
-    display: block;
-    width: 100%;
-    margin: 0 auto;
-}
-
-figcaption {
-    text-align: center;
-}
-
-
-.images-gallery {
-    display: flex;
-    flex-wrap: wrap;
-}
 
 .column img {
     width: 100%;
@@ -361,14 +309,32 @@ figcaption {
     margin-bottom: 1rem;
 }
 
-.fa {
-    padding: 20px;
-    font-size: 30px;
-    width: 50px;
-    text-align: center;
-    text-decoration: none;
+.container_gallery {
+    border: 3px solid black;
+    width: 100%;
+    margin: 20px auto;
+    background-color: blanchedalmond;
+    display: block;
 }
 
+.container_gallery figure {
+    margin: 15px;
+}
+
+.container_gallery img {
+    width: 100%;
+    height: auto;
+    border: 10px solid transparent;
+    border-image: url(/images/border.png) 30 stretch;
+}
+
+figcaption {
+    text-align: center;
+    font-size: 1rem;
+    padding: 10px;
+}
+
+/* footer icon */
 .fa:hover {
     opacity: 0.7;
 }
@@ -377,26 +343,89 @@ figcaption {
 .fa-instagram {
     background: #125688;
     color: white;
-  }
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+}
 
-  .fa-linkedin {
+.fa-linkedin {
     background: #007bb5;
     color: white;
-  }
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+}
 
-  footer {
+footer {
     color: #001d44;
     padding: 2rem;
     text-align: center;
     font-size: 1rem;
 }
 
-#gallery{
+/* Since the video has a larger size compared to other elements on the other pages, I edited the padding of the footer in video.html individually */
+.videofooter {
+    color: #001d44;
+    padding: 5rem;
     text-align: center;
+    font-size: 1rem;
 }
 
-/* learn from W3Schools -- https://www.w3schools.com/howto/tryit.asp?filename=tryhow_js_topnav */
-@media screen and (min-width: 480px) {
+
+/* music.html */
+.video-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+    padding-top: 30px;
+}
+
+.options {
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+video {
+    width: 100%;
+    height: auto;
+}
+
+.controlsvideo {
+    /* The control bar .controlsvideo */
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px;
+    width: 100%;
+}
+
+button {
+    background-color: transparent;
+    border: none;
+    color: #fff;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+input[type="range"] {
+    width: 100%;
+    margin: 0 8px;
+}
+
+
+
+@media screen and (min-width: 600px) {
     .intro {
         flex-direction: row;
         justify-content: space-between;
@@ -410,31 +439,17 @@ figcaption {
         max-width: 300px;
     }
 
-    h1 {
-        font-size: 2.5rem;
-    }
-
-
-    h2 {
-        font-size: 2rem;
-    }
 
     header {
         justify-content: center;
     }
 
     .topnav a {
-        font-size: 1.5rem;
         display: inline-block;
     }
 
-    .topnav .icon {
+    .topnav a.icon {
         display: none;
-    }
-
-    /* Show all links on larger screens */
-    .topnav a:not(:first-child) {
-        display: inline-block;
     }
 
     .column {
@@ -442,5 +457,26 @@ figcaption {
         padding-right: 0.5rem;
         padding-left: 0.5rem;
     }
+
+    .container_gallery {
+        border: 3px solid black;
+        width: 100%;
+        margin: 20px auto;
+        background-color: blanchedalmond;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: stretch;
+    }
+
+    .container_gallery figure {
+        flex: 1 0 25%;
+        max-width: 25%;
+        margin: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
 
 }
