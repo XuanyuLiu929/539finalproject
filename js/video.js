@@ -59,3 +59,5 @@ B.addEventListener('input', function () {
         A.innerHTML = '&#128266;'; // Unmute symbol
     }
 });
+
+// learn from https://www.youtube.com/watch?v=54I2kBLkYNE 
